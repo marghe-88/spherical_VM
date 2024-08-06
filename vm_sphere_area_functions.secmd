@@ -1,0 +1,239 @@
+
+/* Initializes energy function for each cell */
+init_method_instance := 
+{
+  local mycom;
+  foreach facets ff  do 
+  { 
+      mycom := sprintf "unset edges perim%g",ff.id; 
+      exec mycom;
+      mycom := sprintf "set facet[%g].edge method_instance perim%g",ff.id,ff.id; 
+      exec mycom;
+      mycom := sprintf "unset edges arn%g",ff.id; 
+      exec mycom;
+      mycom := sprintf "unset edges ars%g",ff.id; 
+      exec mycom;
+      mycom := sprintf "set facet[%g].edge method_instance arn%g",ff.id,ff.id; 
+      exec mycom;
+      mycom := sprintf "set facet[%g].edge method_instance ars%g",ff.id,ff.id; 
+      exec mycom;
+  };
+  return 0
+}; 
+
+
+
+/* Set all cell properties according to parameters file */
+setall_cell_prop:=
+{
+  local mycom,ii;
+  for (ii:=1; ii < facet_count +1; ii += 1 )
+  {
+  mycom := sprintf "const%d.modulus := %f;",ii,pzero^2; 
+  exec mycom;
+  mycom := sprintf "ten%d.modulus := %f;",ii,-2*pzero; 
+  exec mycom; 
+  mycom := sprintf "en_area_%d.modulus := %f;",ii,ka; 
+  exec mycom; 
+  };
+return 0
+};
+
+
+/* Function to minimize energy along the direction found by Newton’s method using the Hessian */
+hess_seek:=
+{ 
+  hessian_seek; 
+  g 20+(random > 0.5);
+};
+
+
+
+/* Energy minimization procedure */
+eq_energy:=
+{
+  if scale > step_tol 
+  then
+    {
+      nn:=0;
+      do {
+        hess_seek;
+        nn+=1
+      } 
+      while (scale > step_tol AND nn < max_gg_steps); 
+    };
+  nn:=0;
+  do {
+    g 1; 
+    nn+=1
+  } 
+  while (scale > step_tol AND nn < max_gg_steps); 
+  if scale > step_tol 
+  then
+    {
+      nn:=0;
+      do {
+        hess_seek;
+        nn+=1
+      } 
+      while (scale > step_tol AND nn < 2*max_gg_steps); 
+    };
+  return 0
+};
+
+
+
+/* Function to save the tissue global properties, as well as individual cell and edges properties, for the equilibrated configurations */ 
+write_results:=
+{
+  cell_perim:=0;
+  cell_area:=0;
+  edge_tension:=0;
+  local f1,f2,pp;
+  output_fn := sprintf "%s.final_result.txt", datafilename;
+  printf "## tissue global properties: Ncell, p0, ka, step size, final energy \n" >> output_fn;
+  printf "%g %g %g %g %g \n",facet_count, pzero,ka,  scale, total_energy >> output_fn;
+  printf "## cell properties: cell id, cell perimeter, cell area, cell shape index, number of cell neighbors  \n" >> output_fn;
+  foreach facet ff do
+  {
+    mycom := sprintf "cell_perim := perim%d.value;",ff.id; 
+    exec mycom;
+    mycom := sprintf "cell_area := cell_area_%d.value;",ff.id; 
+    exec mycom;
+    printf "%d %g %g %g %g \n",ff.id, cell_perim, cell_area, cell_perim/sqrt(cell_area),  ff.valence >> output_fn;
+  };
+  printf "## edge properties: edge id, edge tension, edge length \n" >> output_fn;
+  foreach edge ee do
+  {
+      f1 := ee.facet[1].id;
+      f2 := ee.facet[2].id;
+      edge_tension:=sum(facet[f1].edges,length)+sum(facet[f2].edges,length) - 2*pzero;
+      printf "%d %g %g \n",ee.id, edge_tension, ee.length >> output_fn;
+  };
+}
+
+
+
+/* Function to save the vertices' spherical coordinates for the equilibrated configurations */ 
+write_vertices:=
+{
+  local ii;
+  output_fn_1 := sprintf "%s.vertices.txt", datafilename;
+  for (ii:=1; ii < vertex_count+1; ii ++)
+  {
+    printf "%g %g \n ", vertex[ii].p[1], vertex[ii].p[2] >> output_fn_1;
+  }; 
+};
+
+
+
+/* Function to save the edges ID of each cell for the equilibrated configurations */
+write_cell_list:=
+{
+  local ii,jj;
+  output_fn_2 := sprintf "%s.CL.txt", datafilename;
+  for (ii:=1; ii < facet_count+1; ii ++)
+  {
+      for (jj:=1; jj < facet[ii].valence+1; jj++)
+      {
+        printf "%d ", facet[ii].vertex[jj].id >> output_fn_2;
+      };
+    printf " \n" >> output_fn_2;
+  };
+}
+
+
+
+/* Function to print system's positive topological charge for the equilibrated configurations */
+get_qplus:=
+{
+  qplus:=0;
+  for (zz:=1; zz < 6; zz++)
+  {
+    Nzz := sum(facets ff where ff.valence == zz,1);
+    Qzz := 6-zz;
+    qplus:=qplus+Nzz*Qzz;
+  };
+  qplus := qplus/facet_count;
+  print qplus;
+}
+
+
+
+/* Perform T1 transition */
+function integer T1_l(real ll)
+{
+  t1_edgeswap edges where length < ll; // performs T1's on edges shorter than the threshold
+  init_method_instance; // refresh which edges belong to which cells
+  g 20; // g is the basic conj-grad step operation
+  get_qplus;
+return 1
+};
+
+
+
+/* Function to save tissue global properties of equilibrated configurations for the entire range of shape indices */
+write_result_seq:=
+{
+  get_qplus;
+  output_fn := sprintf "%s.results_sequential.txt", datafilename;
+  printf "%g %g %g %g %g %0.18f %g \n",facet_count, random_seed, pzero, ka,  scale, total_energy, qplus >> output_fn;
+}
+
+
+
+gogo:=
+{
+  pzero:=3.7;
+  init_method_instance;
+  setall_cell_prop;
+  conj_grad on;
+  
+  temp:=T1_l(0.01);
+  temp:=T1_l(0.02);
+  temp:=T1_l(0.05);
+  temp:=T1_l(0.1);
+  temp:=T1_l(0.2);
+  temp:=T1_l(0.3);
+  temp:=T1_l(0.01);
+  temp:=T1_l(0.02);
+  temp:=T1_l(0.05);
+  temp:=T1_l(0.1);
+  temp:=T1_l(0.2);
+  temp:=T1_l(0.3);
+  temp:=T1_l(0.01);
+  temp:=T1_l(0.02);
+  temp:=T1_l(0.05);
+  temp:=T1_l(0.1);
+  temp:=T1_l(0.2);
+  temp:=T1_l(0.3);
+  temp:=T1_l(0.01);
+  temp:=T1_l(0.02);
+  temp:=T1_l(0.05);
+  temp:=T1_l(0.1);
+  temp:=T1_l(0.2);
+  temp:=T1_l(0.3);
+
+  pzero:=4;
+  setall_cell_prop;
+  eq_energy;
+  
+  write_results;
+  write_vertices;
+  write_cell_list;
+  write_result_seq;
+
+  for  (jj:=1; jj < npzero+1; jj++)
+  {
+    pzero:=pzero+dpzero;
+    setall_cell_prop;
+    eq_energy;
+    write_results;
+    write_vertices;
+    write_result_seq;
+
+  };
+  ////exit;
+};
+
+

@@ -1,0 +1,10 @@
+pzero:=0; /* preferred cell perimeter in the energy function */
+ka:=1; /* modulus for the area term in the energy function */ 
+min_edge_length:=0.1; /* if edges have shorter lengths than this, a T1 will be performed */
+n_try_t1:=0; /* number of T1 transitions to attempt */
+max_gg_steps:= 1e2; /* maximum number of energy minimization steps to perform */
+step_tol:=1e-10; /* crit. for reaching energy minimum */
+qplus:=0; /* System's total positive topological charge */
+///dpzero := -0.005; /* delta difference between consecutive values of shape index */
+dpzero := -0.05; /* delta difference between consecutive values of shape index */
+npzero:= 5; /* number of shape index's values to simulate */

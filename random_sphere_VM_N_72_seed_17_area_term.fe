@@ -1,0 +1,1095 @@
+STRING 
+PARAMETER Rad=2.393653682 
+boundary 1 parameters 2     //  sphere p1 = theta, p2 = phi 
+x1:  Rad * cos(p1) * sin(p2) 
+x2:  Rad * sin(p1) * sin(p2) 
+x3:  Rad * cos(p2) 
+constraint 1  
+formula: x^2 + y^2 + z^2 = Rad^2  
+length_method_name "spherical_arc_length"  
+method_instance perim1 method spherical_arc_length 
+quantity per1  energy function perim1.value^2  
+quantity ten1  energy function perim1.value modulus 0 
+quantity const1  energy function 1 modulus 0 
+method_instance arn1  method spherical_arc_area_n 
+method_instance ars1  method spherical_arc_area_s 
+quantity cell_area_1  info_only function minimum(abs(arn1.value),abs(ars1.value)) 
+quantity en_area_1  energy function (minimum(abs(arn1.value),abs(ars1.value))-1)^2 modulus 0 
+ 
+method_instance perim2 method spherical_arc_length 
+quantity per2  energy function perim2.value^2  
+quantity ten2  energy function perim2.value modulus 0 
+quantity const2  energy function 1 modulus 0 
+method_instance arn2  method spherical_arc_area_n 
+method_instance ars2  method spherical_arc_area_s 
+quantity cell_area_2  info_only function minimum(abs(arn2.value),abs(ars2.value)) 
+quantity en_area_2  energy function (minimum(abs(arn2.value),abs(ars2.value))-1)^2 modulus 0 
+ 
+method_instance perim3 method spherical_arc_length 
+quantity per3  energy function perim3.value^2  
+quantity ten3  energy function perim3.value modulus 0 
+quantity const3  energy function 1 modulus 0 
+method_instance arn3  method spherical_arc_area_n 
+method_instance ars3  method spherical_arc_area_s 
+quantity cell_area_3  info_only function minimum(abs(arn3.value),abs(ars3.value)) 
+quantity en_area_3  energy function (minimum(abs(arn3.value),abs(ars3.value))-1)^2 modulus 0 
+ 
+method_instance perim4 method spherical_arc_length 
+quantity per4  energy function perim4.value^2  
+quantity ten4  energy function perim4.value modulus 0 
+quantity const4  energy function 1 modulus 0 
+method_instance arn4  method spherical_arc_area_n 
+method_instance ars4  method spherical_arc_area_s 
+quantity cell_area_4  info_only function minimum(abs(arn4.value),abs(ars4.value)) 
+quantity en_area_4  energy function (minimum(abs(arn4.value),abs(ars4.value))-1)^2 modulus 0 
+ 
+method_instance perim5 method spherical_arc_length 
+quantity per5  energy function perim5.value^2  
+quantity ten5  energy function perim5.value modulus 0 
+quantity const5  energy function 1 modulus 0 
+method_instance arn5  method spherical_arc_area_n 
+method_instance ars5  method spherical_arc_area_s 
+quantity cell_area_5  info_only function minimum(abs(arn5.value),abs(ars5.value)) 
+quantity en_area_5  energy function (minimum(abs(arn5.value),abs(ars5.value))-1)^2 modulus 0 
+ 
+method_instance perim6 method spherical_arc_length 
+quantity per6  energy function perim6.value^2  
+quantity ten6  energy function perim6.value modulus 0 
+quantity const6  energy function 1 modulus 0 
+method_instance arn6  method spherical_arc_area_n 
+method_instance ars6  method spherical_arc_area_s 
+quantity cell_area_6  info_only function minimum(abs(arn6.value),abs(ars6.value)) 
+quantity en_area_6  energy function (minimum(abs(arn6.value),abs(ars6.value))-1)^2 modulus 0 
+ 
+method_instance perim7 method spherical_arc_length 
+quantity per7  energy function perim7.value^2  
+quantity ten7  energy function perim7.value modulus 0 
+quantity const7  energy function 1 modulus 0 
+method_instance arn7  method spherical_arc_area_n 
+method_instance ars7  method spherical_arc_area_s 
+quantity cell_area_7  info_only function minimum(abs(arn7.value),abs(ars7.value)) 
+quantity en_area_7  energy function (minimum(abs(arn7.value),abs(ars7.value))-1)^2 modulus 0 
+ 
+method_instance perim8 method spherical_arc_length 
+quantity per8  energy function perim8.value^2  
+quantity ten8  energy function perim8.value modulus 0 
+quantity const8  energy function 1 modulus 0 
+method_instance arn8  method spherical_arc_area_n 
+method_instance ars8  method spherical_arc_area_s 
+quantity cell_area_8  info_only function minimum(abs(arn8.value),abs(ars8.value)) 
+quantity en_area_8  energy function (minimum(abs(arn8.value),abs(ars8.value))-1)^2 modulus 0 
+ 
+method_instance perim9 method spherical_arc_length 
+quantity per9  energy function perim9.value^2  
+quantity ten9  energy function perim9.value modulus 0 
+quantity const9  energy function 1 modulus 0 
+method_instance arn9  method spherical_arc_area_n 
+method_instance ars9  method spherical_arc_area_s 
+quantity cell_area_9  info_only function minimum(abs(arn9.value),abs(ars9.value)) 
+quantity en_area_9  energy function (minimum(abs(arn9.value),abs(ars9.value))-1)^2 modulus 0 
+ 
+method_instance perim10 method spherical_arc_length 
+quantity per10  energy function perim10.value^2  
+quantity ten10  energy function perim10.value modulus 0 
+quantity const10  energy function 1 modulus 0 
+method_instance arn10  method spherical_arc_area_n 
+method_instance ars10  method spherical_arc_area_s 
+quantity cell_area_10  info_only function minimum(abs(arn10.value),abs(ars10.value)) 
+quantity en_area_10  energy function (minimum(abs(arn10.value),abs(ars10.value))-1)^2 modulus 0 
+ 
+method_instance perim11 method spherical_arc_length 
+quantity per11  energy function perim11.value^2  
+quantity ten11  energy function perim11.value modulus 0 
+quantity const11  energy function 1 modulus 0 
+method_instance arn11  method spherical_arc_area_n 
+method_instance ars11  method spherical_arc_area_s 
+quantity cell_area_11  info_only function minimum(abs(arn11.value),abs(ars11.value)) 
+quantity en_area_11  energy function (minimum(abs(arn11.value),abs(ars11.value))-1)^2 modulus 0 
+ 
+method_instance perim12 method spherical_arc_length 
+quantity per12  energy function perim12.value^2  
+quantity ten12  energy function perim12.value modulus 0 
+quantity const12  energy function 1 modulus 0 
+method_instance arn12  method spherical_arc_area_n 
+method_instance ars12  method spherical_arc_area_s 
+quantity cell_area_12  info_only function minimum(abs(arn12.value),abs(ars12.value)) 
+quantity en_area_12  energy function (minimum(abs(arn12.value),abs(ars12.value))-1)^2 modulus 0 
+ 
+method_instance perim13 method spherical_arc_length 
+quantity per13  energy function perim13.value^2  
+quantity ten13  energy function perim13.value modulus 0 
+quantity const13  energy function 1 modulus 0 
+method_instance arn13  method spherical_arc_area_n 
+method_instance ars13  method spherical_arc_area_s 
+quantity cell_area_13  info_only function minimum(abs(arn13.value),abs(ars13.value)) 
+quantity en_area_13  energy function (minimum(abs(arn13.value),abs(ars13.value))-1)^2 modulus 0 
+ 
+method_instance perim14 method spherical_arc_length 
+quantity per14  energy function perim14.value^2  
+quantity ten14  energy function perim14.value modulus 0 
+quantity const14  energy function 1 modulus 0 
+method_instance arn14  method spherical_arc_area_n 
+method_instance ars14  method spherical_arc_area_s 
+quantity cell_area_14  info_only function minimum(abs(arn14.value),abs(ars14.value)) 
+quantity en_area_14  energy function (minimum(abs(arn14.value),abs(ars14.value))-1)^2 modulus 0 
+ 
+method_instance perim15 method spherical_arc_length 
+quantity per15  energy function perim15.value^2  
+quantity ten15  energy function perim15.value modulus 0 
+quantity const15  energy function 1 modulus 0 
+method_instance arn15  method spherical_arc_area_n 
+method_instance ars15  method spherical_arc_area_s 
+quantity cell_area_15  info_only function minimum(abs(arn15.value),abs(ars15.value)) 
+quantity en_area_15  energy function (minimum(abs(arn15.value),abs(ars15.value))-1)^2 modulus 0 
+ 
+method_instance perim16 method spherical_arc_length 
+quantity per16  energy function perim16.value^2  
+quantity ten16  energy function perim16.value modulus 0 
+quantity const16  energy function 1 modulus 0 
+method_instance arn16  method spherical_arc_area_n 
+method_instance ars16  method spherical_arc_area_s 
+quantity cell_area_16  info_only function minimum(abs(arn16.value),abs(ars16.value)) 
+quantity en_area_16  energy function (minimum(abs(arn16.value),abs(ars16.value))-1)^2 modulus 0 
+ 
+method_instance perim17 method spherical_arc_length 
+quantity per17  energy function perim17.value^2  
+quantity ten17  energy function perim17.value modulus 0 
+quantity const17  energy function 1 modulus 0 
+method_instance arn17  method spherical_arc_area_n 
+method_instance ars17  method spherical_arc_area_s 
+quantity cell_area_17  info_only function minimum(abs(arn17.value),abs(ars17.value)) 
+quantity en_area_17  energy function (minimum(abs(arn17.value),abs(ars17.value))-1)^2 modulus 0 
+ 
+method_instance perim18 method spherical_arc_length 
+quantity per18  energy function perim18.value^2  
+quantity ten18  energy function perim18.value modulus 0 
+quantity const18  energy function 1 modulus 0 
+method_instance arn18  method spherical_arc_area_n 
+method_instance ars18  method spherical_arc_area_s 
+quantity cell_area_18  info_only function minimum(abs(arn18.value),abs(ars18.value)) 
+quantity en_area_18  energy function (minimum(abs(arn18.value),abs(ars18.value))-1)^2 modulus 0 
+ 
+method_instance perim19 method spherical_arc_length 
+quantity per19  energy function perim19.value^2  
+quantity ten19  energy function perim19.value modulus 0 
+quantity const19  energy function 1 modulus 0 
+method_instance arn19  method spherical_arc_area_n 
+method_instance ars19  method spherical_arc_area_s 
+quantity cell_area_19  info_only function minimum(abs(arn19.value),abs(ars19.value)) 
+quantity en_area_19  energy function (minimum(abs(arn19.value),abs(ars19.value))-1)^2 modulus 0 
+ 
+method_instance perim20 method spherical_arc_length 
+quantity per20  energy function perim20.value^2  
+quantity ten20  energy function perim20.value modulus 0 
+quantity const20  energy function 1 modulus 0 
+method_instance arn20  method spherical_arc_area_n 
+method_instance ars20  method spherical_arc_area_s 
+quantity cell_area_20  info_only function minimum(abs(arn20.value),abs(ars20.value)) 
+quantity en_area_20  energy function (minimum(abs(arn20.value),abs(ars20.value))-1)^2 modulus 0 
+ 
+method_instance perim21 method spherical_arc_length 
+quantity per21  energy function perim21.value^2  
+quantity ten21  energy function perim21.value modulus 0 
+quantity const21  energy function 1 modulus 0 
+method_instance arn21  method spherical_arc_area_n 
+method_instance ars21  method spherical_arc_area_s 
+quantity cell_area_21  info_only function minimum(abs(arn21.value),abs(ars21.value)) 
+quantity en_area_21  energy function (minimum(abs(arn21.value),abs(ars21.value))-1)^2 modulus 0 
+ 
+method_instance perim22 method spherical_arc_length 
+quantity per22  energy function perim22.value^2  
+quantity ten22  energy function perim22.value modulus 0 
+quantity const22  energy function 1 modulus 0 
+method_instance arn22  method spherical_arc_area_n 
+method_instance ars22  method spherical_arc_area_s 
+quantity cell_area_22  info_only function minimum(abs(arn22.value),abs(ars22.value)) 
+quantity en_area_22  energy function (minimum(abs(arn22.value),abs(ars22.value))-1)^2 modulus 0 
+ 
+method_instance perim23 method spherical_arc_length 
+quantity per23  energy function perim23.value^2  
+quantity ten23  energy function perim23.value modulus 0 
+quantity const23  energy function 1 modulus 0 
+method_instance arn23  method spherical_arc_area_n 
+method_instance ars23  method spherical_arc_area_s 
+quantity cell_area_23  info_only function minimum(abs(arn23.value),abs(ars23.value)) 
+quantity en_area_23  energy function (minimum(abs(arn23.value),abs(ars23.value))-1)^2 modulus 0 
+ 
+method_instance perim24 method spherical_arc_length 
+quantity per24  energy function perim24.value^2  
+quantity ten24  energy function perim24.value modulus 0 
+quantity const24  energy function 1 modulus 0 
+method_instance arn24  method spherical_arc_area_n 
+method_instance ars24  method spherical_arc_area_s 
+quantity cell_area_24  info_only function minimum(abs(arn24.value),abs(ars24.value)) 
+quantity en_area_24  energy function (minimum(abs(arn24.value),abs(ars24.value))-1)^2 modulus 0 
+ 
+method_instance perim25 method spherical_arc_length 
+quantity per25  energy function perim25.value^2  
+quantity ten25  energy function perim25.value modulus 0 
+quantity const25  energy function 1 modulus 0 
+method_instance arn25  method spherical_arc_area_n 
+method_instance ars25  method spherical_arc_area_s 
+quantity cell_area_25  info_only function minimum(abs(arn25.value),abs(ars25.value)) 
+quantity en_area_25  energy function (minimum(abs(arn25.value),abs(ars25.value))-1)^2 modulus 0 
+ 
+method_instance perim26 method spherical_arc_length 
+quantity per26  energy function perim26.value^2  
+quantity ten26  energy function perim26.value modulus 0 
+quantity const26  energy function 1 modulus 0 
+method_instance arn26  method spherical_arc_area_n 
+method_instance ars26  method spherical_arc_area_s 
+quantity cell_area_26  info_only function minimum(abs(arn26.value),abs(ars26.value)) 
+quantity en_area_26  energy function (minimum(abs(arn26.value),abs(ars26.value))-1)^2 modulus 0 
+ 
+method_instance perim27 method spherical_arc_length 
+quantity per27  energy function perim27.value^2  
+quantity ten27  energy function perim27.value modulus 0 
+quantity const27  energy function 1 modulus 0 
+method_instance arn27  method spherical_arc_area_n 
+method_instance ars27  method spherical_arc_area_s 
+quantity cell_area_27  info_only function minimum(abs(arn27.value),abs(ars27.value)) 
+quantity en_area_27  energy function (minimum(abs(arn27.value),abs(ars27.value))-1)^2 modulus 0 
+ 
+method_instance perim28 method spherical_arc_length 
+quantity per28  energy function perim28.value^2  
+quantity ten28  energy function perim28.value modulus 0 
+quantity const28  energy function 1 modulus 0 
+method_instance arn28  method spherical_arc_area_n 
+method_instance ars28  method spherical_arc_area_s 
+quantity cell_area_28  info_only function minimum(abs(arn28.value),abs(ars28.value)) 
+quantity en_area_28  energy function (minimum(abs(arn28.value),abs(ars28.value))-1)^2 modulus 0 
+ 
+method_instance perim29 method spherical_arc_length 
+quantity per29  energy function perim29.value^2  
+quantity ten29  energy function perim29.value modulus 0 
+quantity const29  energy function 1 modulus 0 
+method_instance arn29  method spherical_arc_area_n 
+method_instance ars29  method spherical_arc_area_s 
+quantity cell_area_29  info_only function minimum(abs(arn29.value),abs(ars29.value)) 
+quantity en_area_29  energy function (minimum(abs(arn29.value),abs(ars29.value))-1)^2 modulus 0 
+ 
+method_instance perim30 method spherical_arc_length 
+quantity per30  energy function perim30.value^2  
+quantity ten30  energy function perim30.value modulus 0 
+quantity const30  energy function 1 modulus 0 
+method_instance arn30  method spherical_arc_area_n 
+method_instance ars30  method spherical_arc_area_s 
+quantity cell_area_30  info_only function minimum(abs(arn30.value),abs(ars30.value)) 
+quantity en_area_30  energy function (minimum(abs(arn30.value),abs(ars30.value))-1)^2 modulus 0 
+ 
+method_instance perim31 method spherical_arc_length 
+quantity per31  energy function perim31.value^2  
+quantity ten31  energy function perim31.value modulus 0 
+quantity const31  energy function 1 modulus 0 
+method_instance arn31  method spherical_arc_area_n 
+method_instance ars31  method spherical_arc_area_s 
+quantity cell_area_31  info_only function minimum(abs(arn31.value),abs(ars31.value)) 
+quantity en_area_31  energy function (minimum(abs(arn31.value),abs(ars31.value))-1)^2 modulus 0 
+ 
+method_instance perim32 method spherical_arc_length 
+quantity per32  energy function perim32.value^2  
+quantity ten32  energy function perim32.value modulus 0 
+quantity const32  energy function 1 modulus 0 
+method_instance arn32  method spherical_arc_area_n 
+method_instance ars32  method spherical_arc_area_s 
+quantity cell_area_32  info_only function minimum(abs(arn32.value),abs(ars32.value)) 
+quantity en_area_32  energy function (minimum(abs(arn32.value),abs(ars32.value))-1)^2 modulus 0 
+ 
+method_instance perim33 method spherical_arc_length 
+quantity per33  energy function perim33.value^2  
+quantity ten33  energy function perim33.value modulus 0 
+quantity const33  energy function 1 modulus 0 
+method_instance arn33  method spherical_arc_area_n 
+method_instance ars33  method spherical_arc_area_s 
+quantity cell_area_33  info_only function minimum(abs(arn33.value),abs(ars33.value)) 
+quantity en_area_33  energy function (minimum(abs(arn33.value),abs(ars33.value))-1)^2 modulus 0 
+ 
+method_instance perim34 method spherical_arc_length 
+quantity per34  energy function perim34.value^2  
+quantity ten34  energy function perim34.value modulus 0 
+quantity const34  energy function 1 modulus 0 
+method_instance arn34  method spherical_arc_area_n 
+method_instance ars34  method spherical_arc_area_s 
+quantity cell_area_34  info_only function minimum(abs(arn34.value),abs(ars34.value)) 
+quantity en_area_34  energy function (minimum(abs(arn34.value),abs(ars34.value))-1)^2 modulus 0 
+ 
+method_instance perim35 method spherical_arc_length 
+quantity per35  energy function perim35.value^2  
+quantity ten35  energy function perim35.value modulus 0 
+quantity const35  energy function 1 modulus 0 
+method_instance arn35  method spherical_arc_area_n 
+method_instance ars35  method spherical_arc_area_s 
+quantity cell_area_35  info_only function minimum(abs(arn35.value),abs(ars35.value)) 
+quantity en_area_35  energy function (minimum(abs(arn35.value),abs(ars35.value))-1)^2 modulus 0 
+ 
+method_instance perim36 method spherical_arc_length 
+quantity per36  energy function perim36.value^2  
+quantity ten36  energy function perim36.value modulus 0 
+quantity const36  energy function 1 modulus 0 
+method_instance arn36  method spherical_arc_area_n 
+method_instance ars36  method spherical_arc_area_s 
+quantity cell_area_36  info_only function minimum(abs(arn36.value),abs(ars36.value)) 
+quantity en_area_36  energy function (minimum(abs(arn36.value),abs(ars36.value))-1)^2 modulus 0 
+ 
+method_instance perim37 method spherical_arc_length 
+quantity per37  energy function perim37.value^2  
+quantity ten37  energy function perim37.value modulus 0 
+quantity const37  energy function 1 modulus 0 
+method_instance arn37  method spherical_arc_area_n 
+method_instance ars37  method spherical_arc_area_s 
+quantity cell_area_37  info_only function minimum(abs(arn37.value),abs(ars37.value)) 
+quantity en_area_37  energy function (minimum(abs(arn37.value),abs(ars37.value))-1)^2 modulus 0 
+ 
+method_instance perim38 method spherical_arc_length 
+quantity per38  energy function perim38.value^2  
+quantity ten38  energy function perim38.value modulus 0 
+quantity const38  energy function 1 modulus 0 
+method_instance arn38  method spherical_arc_area_n 
+method_instance ars38  method spherical_arc_area_s 
+quantity cell_area_38  info_only function minimum(abs(arn38.value),abs(ars38.value)) 
+quantity en_area_38  energy function (minimum(abs(arn38.value),abs(ars38.value))-1)^2 modulus 0 
+ 
+method_instance perim39 method spherical_arc_length 
+quantity per39  energy function perim39.value^2  
+quantity ten39  energy function perim39.value modulus 0 
+quantity const39  energy function 1 modulus 0 
+method_instance arn39  method spherical_arc_area_n 
+method_instance ars39  method spherical_arc_area_s 
+quantity cell_area_39  info_only function minimum(abs(arn39.value),abs(ars39.value)) 
+quantity en_area_39  energy function (minimum(abs(arn39.value),abs(ars39.value))-1)^2 modulus 0 
+ 
+method_instance perim40 method spherical_arc_length 
+quantity per40  energy function perim40.value^2  
+quantity ten40  energy function perim40.value modulus 0 
+quantity const40  energy function 1 modulus 0 
+method_instance arn40  method spherical_arc_area_n 
+method_instance ars40  method spherical_arc_area_s 
+quantity cell_area_40  info_only function minimum(abs(arn40.value),abs(ars40.value)) 
+quantity en_area_40  energy function (minimum(abs(arn40.value),abs(ars40.value))-1)^2 modulus 0 
+ 
+method_instance perim41 method spherical_arc_length 
+quantity per41  energy function perim41.value^2  
+quantity ten41  energy function perim41.value modulus 0 
+quantity const41  energy function 1 modulus 0 
+method_instance arn41  method spherical_arc_area_n 
+method_instance ars41  method spherical_arc_area_s 
+quantity cell_area_41  info_only function minimum(abs(arn41.value),abs(ars41.value)) 
+quantity en_area_41  energy function (minimum(abs(arn41.value),abs(ars41.value))-1)^2 modulus 0 
+ 
+method_instance perim42 method spherical_arc_length 
+quantity per42  energy function perim42.value^2  
+quantity ten42  energy function perim42.value modulus 0 
+quantity const42  energy function 1 modulus 0 
+method_instance arn42  method spherical_arc_area_n 
+method_instance ars42  method spherical_arc_area_s 
+quantity cell_area_42  info_only function minimum(abs(arn42.value),abs(ars42.value)) 
+quantity en_area_42  energy function (minimum(abs(arn42.value),abs(ars42.value))-1)^2 modulus 0 
+ 
+method_instance perim43 method spherical_arc_length 
+quantity per43  energy function perim43.value^2  
+quantity ten43  energy function perim43.value modulus 0 
+quantity const43  energy function 1 modulus 0 
+method_instance arn43  method spherical_arc_area_n 
+method_instance ars43  method spherical_arc_area_s 
+quantity cell_area_43  info_only function minimum(abs(arn43.value),abs(ars43.value)) 
+quantity en_area_43  energy function (minimum(abs(arn43.value),abs(ars43.value))-1)^2 modulus 0 
+ 
+method_instance perim44 method spherical_arc_length 
+quantity per44  energy function perim44.value^2  
+quantity ten44  energy function perim44.value modulus 0 
+quantity const44  energy function 1 modulus 0 
+method_instance arn44  method spherical_arc_area_n 
+method_instance ars44  method spherical_arc_area_s 
+quantity cell_area_44  info_only function minimum(abs(arn44.value),abs(ars44.value)) 
+quantity en_area_44  energy function (minimum(abs(arn44.value),abs(ars44.value))-1)^2 modulus 0 
+ 
+method_instance perim45 method spherical_arc_length 
+quantity per45  energy function perim45.value^2  
+quantity ten45  energy function perim45.value modulus 0 
+quantity const45  energy function 1 modulus 0 
+method_instance arn45  method spherical_arc_area_n 
+method_instance ars45  method spherical_arc_area_s 
+quantity cell_area_45  info_only function minimum(abs(arn45.value),abs(ars45.value)) 
+quantity en_area_45  energy function (minimum(abs(arn45.value),abs(ars45.value))-1)^2 modulus 0 
+ 
+method_instance perim46 method spherical_arc_length 
+quantity per46  energy function perim46.value^2  
+quantity ten46  energy function perim46.value modulus 0 
+quantity const46  energy function 1 modulus 0 
+method_instance arn46  method spherical_arc_area_n 
+method_instance ars46  method spherical_arc_area_s 
+quantity cell_area_46  info_only function minimum(abs(arn46.value),abs(ars46.value)) 
+quantity en_area_46  energy function (minimum(abs(arn46.value),abs(ars46.value))-1)^2 modulus 0 
+ 
+method_instance perim47 method spherical_arc_length 
+quantity per47  energy function perim47.value^2  
+quantity ten47  energy function perim47.value modulus 0 
+quantity const47  energy function 1 modulus 0 
+method_instance arn47  method spherical_arc_area_n 
+method_instance ars47  method spherical_arc_area_s 
+quantity cell_area_47  info_only function minimum(abs(arn47.value),abs(ars47.value)) 
+quantity en_area_47  energy function (minimum(abs(arn47.value),abs(ars47.value))-1)^2 modulus 0 
+ 
+method_instance perim48 method spherical_arc_length 
+quantity per48  energy function perim48.value^2  
+quantity ten48  energy function perim48.value modulus 0 
+quantity const48  energy function 1 modulus 0 
+method_instance arn48  method spherical_arc_area_n 
+method_instance ars48  method spherical_arc_area_s 
+quantity cell_area_48  info_only function minimum(abs(arn48.value),abs(ars48.value)) 
+quantity en_area_48  energy function (minimum(abs(arn48.value),abs(ars48.value))-1)^2 modulus 0 
+ 
+method_instance perim49 method spherical_arc_length 
+quantity per49  energy function perim49.value^2  
+quantity ten49  energy function perim49.value modulus 0 
+quantity const49  energy function 1 modulus 0 
+method_instance arn49  method spherical_arc_area_n 
+method_instance ars49  method spherical_arc_area_s 
+quantity cell_area_49  info_only function minimum(abs(arn49.value),abs(ars49.value)) 
+quantity en_area_49  energy function (minimum(abs(arn49.value),abs(ars49.value))-1)^2 modulus 0 
+ 
+method_instance perim50 method spherical_arc_length 
+quantity per50  energy function perim50.value^2  
+quantity ten50  energy function perim50.value modulus 0 
+quantity const50  energy function 1 modulus 0 
+method_instance arn50  method spherical_arc_area_n 
+method_instance ars50  method spherical_arc_area_s 
+quantity cell_area_50  info_only function minimum(abs(arn50.value),abs(ars50.value)) 
+quantity en_area_50  energy function (minimum(abs(arn50.value),abs(ars50.value))-1)^2 modulus 0 
+ 
+method_instance perim51 method spherical_arc_length 
+quantity per51  energy function perim51.value^2  
+quantity ten51  energy function perim51.value modulus 0 
+quantity const51  energy function 1 modulus 0 
+method_instance arn51  method spherical_arc_area_n 
+method_instance ars51  method spherical_arc_area_s 
+quantity cell_area_51  info_only function minimum(abs(arn51.value),abs(ars51.value)) 
+quantity en_area_51  energy function (minimum(abs(arn51.value),abs(ars51.value))-1)^2 modulus 0 
+ 
+method_instance perim52 method spherical_arc_length 
+quantity per52  energy function perim52.value^2  
+quantity ten52  energy function perim52.value modulus 0 
+quantity const52  energy function 1 modulus 0 
+method_instance arn52  method spherical_arc_area_n 
+method_instance ars52  method spherical_arc_area_s 
+quantity cell_area_52  info_only function minimum(abs(arn52.value),abs(ars52.value)) 
+quantity en_area_52  energy function (minimum(abs(arn52.value),abs(ars52.value))-1)^2 modulus 0 
+ 
+method_instance perim53 method spherical_arc_length 
+quantity per53  energy function perim53.value^2  
+quantity ten53  energy function perim53.value modulus 0 
+quantity const53  energy function 1 modulus 0 
+method_instance arn53  method spherical_arc_area_n 
+method_instance ars53  method spherical_arc_area_s 
+quantity cell_area_53  info_only function minimum(abs(arn53.value),abs(ars53.value)) 
+quantity en_area_53  energy function (minimum(abs(arn53.value),abs(ars53.value))-1)^2 modulus 0 
+ 
+method_instance perim54 method spherical_arc_length 
+quantity per54  energy function perim54.value^2  
+quantity ten54  energy function perim54.value modulus 0 
+quantity const54  energy function 1 modulus 0 
+method_instance arn54  method spherical_arc_area_n 
+method_instance ars54  method spherical_arc_area_s 
+quantity cell_area_54  info_only function minimum(abs(arn54.value),abs(ars54.value)) 
+quantity en_area_54  energy function (minimum(abs(arn54.value),abs(ars54.value))-1)^2 modulus 0 
+ 
+method_instance perim55 method spherical_arc_length 
+quantity per55  energy function perim55.value^2  
+quantity ten55  energy function perim55.value modulus 0 
+quantity const55  energy function 1 modulus 0 
+method_instance arn55  method spherical_arc_area_n 
+method_instance ars55  method spherical_arc_area_s 
+quantity cell_area_55  info_only function minimum(abs(arn55.value),abs(ars55.value)) 
+quantity en_area_55  energy function (minimum(abs(arn55.value),abs(ars55.value))-1)^2 modulus 0 
+ 
+method_instance perim56 method spherical_arc_length 
+quantity per56  energy function perim56.value^2  
+quantity ten56  energy function perim56.value modulus 0 
+quantity const56  energy function 1 modulus 0 
+method_instance arn56  method spherical_arc_area_n 
+method_instance ars56  method spherical_arc_area_s 
+quantity cell_area_56  info_only function minimum(abs(arn56.value),abs(ars56.value)) 
+quantity en_area_56  energy function (minimum(abs(arn56.value),abs(ars56.value))-1)^2 modulus 0 
+ 
+method_instance perim57 method spherical_arc_length 
+quantity per57  energy function perim57.value^2  
+quantity ten57  energy function perim57.value modulus 0 
+quantity const57  energy function 1 modulus 0 
+method_instance arn57  method spherical_arc_area_n 
+method_instance ars57  method spherical_arc_area_s 
+quantity cell_area_57  info_only function minimum(abs(arn57.value),abs(ars57.value)) 
+quantity en_area_57  energy function (minimum(abs(arn57.value),abs(ars57.value))-1)^2 modulus 0 
+ 
+method_instance perim58 method spherical_arc_length 
+quantity per58  energy function perim58.value^2  
+quantity ten58  energy function perim58.value modulus 0 
+quantity const58  energy function 1 modulus 0 
+method_instance arn58  method spherical_arc_area_n 
+method_instance ars58  method spherical_arc_area_s 
+quantity cell_area_58  info_only function minimum(abs(arn58.value),abs(ars58.value)) 
+quantity en_area_58  energy function (minimum(abs(arn58.value),abs(ars58.value))-1)^2 modulus 0 
+ 
+method_instance perim59 method spherical_arc_length 
+quantity per59  energy function perim59.value^2  
+quantity ten59  energy function perim59.value modulus 0 
+quantity const59  energy function 1 modulus 0 
+method_instance arn59  method spherical_arc_area_n 
+method_instance ars59  method spherical_arc_area_s 
+quantity cell_area_59  info_only function minimum(abs(arn59.value),abs(ars59.value)) 
+quantity en_area_59  energy function (minimum(abs(arn59.value),abs(ars59.value))-1)^2 modulus 0 
+ 
+method_instance perim60 method spherical_arc_length 
+quantity per60  energy function perim60.value^2  
+quantity ten60  energy function perim60.value modulus 0 
+quantity const60  energy function 1 modulus 0 
+method_instance arn60  method spherical_arc_area_n 
+method_instance ars60  method spherical_arc_area_s 
+quantity cell_area_60  info_only function minimum(abs(arn60.value),abs(ars60.value)) 
+quantity en_area_60  energy function (minimum(abs(arn60.value),abs(ars60.value))-1)^2 modulus 0 
+ 
+method_instance perim61 method spherical_arc_length 
+quantity per61  energy function perim61.value^2  
+quantity ten61  energy function perim61.value modulus 0 
+quantity const61  energy function 1 modulus 0 
+method_instance arn61  method spherical_arc_area_n 
+method_instance ars61  method spherical_arc_area_s 
+quantity cell_area_61  info_only function minimum(abs(arn61.value),abs(ars61.value)) 
+quantity en_area_61  energy function (minimum(abs(arn61.value),abs(ars61.value))-1)^2 modulus 0 
+ 
+method_instance perim62 method spherical_arc_length 
+quantity per62  energy function perim62.value^2  
+quantity ten62  energy function perim62.value modulus 0 
+quantity const62  energy function 1 modulus 0 
+method_instance arn62  method spherical_arc_area_n 
+method_instance ars62  method spherical_arc_area_s 
+quantity cell_area_62  info_only function minimum(abs(arn62.value),abs(ars62.value)) 
+quantity en_area_62  energy function (minimum(abs(arn62.value),abs(ars62.value))-1)^2 modulus 0 
+ 
+method_instance perim63 method spherical_arc_length 
+quantity per63  energy function perim63.value^2  
+quantity ten63  energy function perim63.value modulus 0 
+quantity const63  energy function 1 modulus 0 
+method_instance arn63  method spherical_arc_area_n 
+method_instance ars63  method spherical_arc_area_s 
+quantity cell_area_63  info_only function minimum(abs(arn63.value),abs(ars63.value)) 
+quantity en_area_63  energy function (minimum(abs(arn63.value),abs(ars63.value))-1)^2 modulus 0 
+ 
+method_instance perim64 method spherical_arc_length 
+quantity per64  energy function perim64.value^2  
+quantity ten64  energy function perim64.value modulus 0 
+quantity const64  energy function 1 modulus 0 
+method_instance arn64  method spherical_arc_area_n 
+method_instance ars64  method spherical_arc_area_s 
+quantity cell_area_64  info_only function minimum(abs(arn64.value),abs(ars64.value)) 
+quantity en_area_64  energy function (minimum(abs(arn64.value),abs(ars64.value))-1)^2 modulus 0 
+ 
+method_instance perim65 method spherical_arc_length 
+quantity per65  energy function perim65.value^2  
+quantity ten65  energy function perim65.value modulus 0 
+quantity const65  energy function 1 modulus 0 
+method_instance arn65  method spherical_arc_area_n 
+method_instance ars65  method spherical_arc_area_s 
+quantity cell_area_65  info_only function minimum(abs(arn65.value),abs(ars65.value)) 
+quantity en_area_65  energy function (minimum(abs(arn65.value),abs(ars65.value))-1)^2 modulus 0 
+ 
+method_instance perim66 method spherical_arc_length 
+quantity per66  energy function perim66.value^2  
+quantity ten66  energy function perim66.value modulus 0 
+quantity const66  energy function 1 modulus 0 
+method_instance arn66  method spherical_arc_area_n 
+method_instance ars66  method spherical_arc_area_s 
+quantity cell_area_66  info_only function minimum(abs(arn66.value),abs(ars66.value)) 
+quantity en_area_66  energy function (minimum(abs(arn66.value),abs(ars66.value))-1)^2 modulus 0 
+ 
+method_instance perim67 method spherical_arc_length 
+quantity per67  energy function perim67.value^2  
+quantity ten67  energy function perim67.value modulus 0 
+quantity const67  energy function 1 modulus 0 
+method_instance arn67  method spherical_arc_area_n 
+method_instance ars67  method spherical_arc_area_s 
+quantity cell_area_67  info_only function minimum(abs(arn67.value),abs(ars67.value)) 
+quantity en_area_67  energy function (minimum(abs(arn67.value),abs(ars67.value))-1)^2 modulus 0 
+ 
+method_instance perim68 method spherical_arc_length 
+quantity per68  energy function perim68.value^2  
+quantity ten68  energy function perim68.value modulus 0 
+quantity const68  energy function 1 modulus 0 
+method_instance arn68  method spherical_arc_area_n 
+method_instance ars68  method spherical_arc_area_s 
+quantity cell_area_68  info_only function minimum(abs(arn68.value),abs(ars68.value)) 
+quantity en_area_68  energy function (minimum(abs(arn68.value),abs(ars68.value))-1)^2 modulus 0 
+ 
+method_instance perim69 method spherical_arc_length 
+quantity per69  energy function perim69.value^2  
+quantity ten69  energy function perim69.value modulus 0 
+quantity const69  energy function 1 modulus 0 
+method_instance arn69  method spherical_arc_area_n 
+method_instance ars69  method spherical_arc_area_s 
+quantity cell_area_69  info_only function minimum(abs(arn69.value),abs(ars69.value)) 
+quantity en_area_69  energy function (minimum(abs(arn69.value),abs(ars69.value))-1)^2 modulus 0 
+ 
+method_instance perim70 method spherical_arc_length 
+quantity per70  energy function perim70.value^2  
+quantity ten70  energy function perim70.value modulus 0 
+quantity const70  energy function 1 modulus 0 
+method_instance arn70  method spherical_arc_area_n 
+method_instance ars70  method spherical_arc_area_s 
+quantity cell_area_70  info_only function minimum(abs(arn70.value),abs(ars70.value)) 
+quantity en_area_70  energy function (minimum(abs(arn70.value),abs(ars70.value))-1)^2 modulus 0 
+ 
+method_instance perim71 method spherical_arc_length 
+quantity per71  energy function perim71.value^2  
+quantity ten71  energy function perim71.value modulus 0 
+quantity const71  energy function 1 modulus 0 
+method_instance arn71  method spherical_arc_area_n 
+method_instance ars71  method spherical_arc_area_s 
+quantity cell_area_71  info_only function minimum(abs(arn71.value),abs(ars71.value)) 
+quantity en_area_71  energy function (minimum(abs(arn71.value),abs(ars71.value))-1)^2 modulus 0 
+ 
+method_instance perim72 method spherical_arc_length 
+quantity per72  energy function perim72.value^2  
+quantity ten72  energy function perim72.value modulus 0 
+quantity const72  energy function 1 modulus 0 
+method_instance arn72  method spherical_arc_area_n 
+method_instance ars72  method spherical_arc_area_s 
+quantity cell_area_72  info_only function minimum(abs(arn72.value),abs(ars72.value)) 
+quantity en_area_72  energy function (minimum(abs(arn72.value),abs(ars72.value))-1)^2 modulus 0 
+ 
+VERTICES 
+    1   4.23415702   2.03747992 boundary 1 
+    2   4.47823576   2.43131674 boundary 1 
+    3   4.79078984   2.04313476 boundary 1 
+    4   4.63818420   2.47989092 boundary 1 
+    5   4.93847822   2.09585288 boundary 1 
+    6   4.97305859   2.15460655 boundary 1 
+    7   5.86414023   0.34259761 boundary 1 
+    8   4.61826821   0.39634277 boundary 1 
+    9   5.63103160   0.43848245 boundary 1 
+   10   4.93374304   0.11560977 boundary 1 
+   11   4.54592072   0.27887419 boundary 1 
+   12   6.10867115   0.82484611 boundary 1 
+   13   5.84969788   0.80696458 boundary 1 
+   14   5.53966932   0.63560826 boundary 1 
+   15   0.21345026   0.41888076 boundary 1 
+   16   3.50287948   1.79003597 boundary 1 
+   17   3.53502993   1.81603078 boundary 1 
+   18   3.78391053   0.93128559 boundary 1 
+   19   3.24712512   0.93666630 boundary 1 
+   20   4.14181689   1.08558998 boundary 1 
+   21   1.72611005   2.63086996 boundary 1 
+   22   2.92008203   2.75241322 boundary 1 
+   23   2.56842451   2.36865701 boundary 1 
+   24   2.51304431   2.91141106 boundary 1 
+   25   2.44134844   2.40359261 boundary 1 
+   26   2.79402334   2.48030649 boundary 1 
+   27   0.07883212   2.37563968 boundary 1 
+   28   0.08850511   2.27722154 boundary 1 
+   29   0.60460748   2.13227591 boundary 1 
+   30   0.15760882   2.53011513 boundary 1 
+   31   0.67426867   2.60960642 boundary 1 
+   32   0.10384436   2.23803920 boundary 1 
+   33   0.37183290   2.12130977 boundary 1 
+   34   1.01518736   2.43616722 boundary 1 
+   35   5.74478034   2.07891692 boundary 1 
+   36   5.66748002   2.20918607 boundary 1 
+   37   5.66993891   2.21346675 boundary 1 
+   38   1.55284619   2.55986714 boundary 1 
+   39   1.95798944   2.25781760 boundary 1 
+   40   2.06954383   2.28859361 boundary 1 
+   41   1.30800565   2.02660277 boundary 1 
+   42   1.90219924   1.99506389 boundary 1 
+   43   1.11080405   2.41659301 boundary 1 
+   44   1.89503708   1.98316255 boundary 1 
+   45   3.95013834   2.71370014 boundary 1 
+   46   3.57702038   2.26040773 boundary 1 
+   47   3.29865063   2.73896444 boundary 1 
+   48   1.31170641   1.70259290 boundary 1 
+   49   1.23867472   1.78248715 boundary 1 
+   50   2.01929929   1.71513778 boundary 1 
+   51   1.99441940   1.49034960 boundary 1 
+   52   0.01829530   2.10156928 boundary 1 
+   53   0.24199734   1.89213484 boundary 1 
+   54   5.99504718   1.83836825 boundary 1 
+   55   0.23691289   1.72664023 boundary 1 
+   56   0.00720748   1.73942190 boundary 1 
+   57   3.23165549   0.92527088 boundary 1 
+   58   3.37980033   1.80614301 boundary 1 
+   59   2.72084084   1.47999305 boundary 1 
+   60   2.80144756   1.57117816 boundary 1 
+   61   1.98789263   0.64962405 boundary 1 
+   62   1.85528789   0.59462246 boundary 1 
+   63   1.77517975   0.94088195 boundary 1 
+   64   0.76658480   0.70817530 boundary 1 
+   65   0.81797305   0.78847400 boundary 1 
+   66   1.75215778   1.02958468 boundary 1 
+   67   1.43318641   1.14535829 boundary 1 
+   68   2.01643236   1.42711329 boundary 1 
+   69   2.25864630   2.11463326 boundary 1 
+   70   5.08919541   2.87692997 boundary 1 
+   71   5.60359274   3.05023536 boundary 1 
+   72   4.15371632   2.71872912 boundary 1 
+   73   4.56018862   2.77749762 boundary 1 
+   74   3.55812836   0.58728024 boundary 1 
+   75   3.10610083   0.79032510 boundary 1 
+   76   4.60915180   0.41675470 boundary 1 
+   77   3.03500653   0.75499563 boundary 1 
+   78   5.80088319   1.91054724 boundary 1 
+   79   5.84477593   1.81621489 boundary 1 
+   80   5.08957868   0.77583842 boundary 1 
+   81   4.35422875   1.07759508 boundary 1 
+   82   4.60549719   1.18864895 boundary 1 
+   83   4.42616117   0.72061280 boundary 1 
+   84   4.65751561   0.58217126 boundary 1 
+   85   5.07307216   0.91607015 boundary 1 
+   86   0.66480889   1.48394527 boundary 1 
+   87   4.72853027   1.84230563 boundary 1 
+   88   4.10634076   1.98899735 boundary 1 
+   89   4.39170316   1.64060271 boundary 1 
+   90   5.58641603   1.29391743 boundary 1 
+   91   5.71574418   1.51479609 boundary 1 
+   92   6.22510833   0.90803826 boundary 1 
+   93   6.03946449   1.32401510 boundary 1 
+   94   5.68239866   1.49230841 boundary 1 
+   95   3.60199605   1.88735318 boundary 1 
+   96   3.19951920   1.86903309 boundary 1 
+   97   2.58180994   2.02532606 boundary 1 
+   98   2.55338102   2.10502822 boundary 1 
+   99   3.55681320   2.00634273 boundary 1 
+  100   4.31119614   2.45766861 boundary 1 
+  101   4.04934462   2.34567432 boundary 1 
+  102   3.89114360   1.98904266 boundary 1 
+  103   4.15321779   2.71450901 boundary 1 
+  104   0.86843678   1.10870595 boundary 1 
+  105   0.64539350   1.45980513 boundary 1 
+  106   5.82598758   2.59864350 boundary 1 
+  107   5.25457962   1.12181697 boundary 1 
+  108   5.08254717   1.89341826 boundary 1 
+  109   5.39742455   1.59943570 boundary 1 
+  110   5.08735048   1.88064059 boundary 1 
+  111   2.95687463   0.73163031 boundary 1 
+  112   2.59329364   0.56832214 boundary 1 
+  113   2.33604775   1.37418811 boundary 1 
+  114   5.25622788   2.81638179 boundary 1 
+  115   5.02594243   1.71501643 boundary 1 
+  116   5.00957428   1.42583942 boundary 1 
+  117   5.03452171   1.46199422 boundary 1 
+  118   4.68997751   1.40413435 boundary 1 
+  119   4.73193157   1.55710655 boundary 1 
+  120   4.21173065   0.69813971 boundary 1 
+  121   4.22955028   1.10432251 boundary 1 
+  122   4.41030447   1.59003486 boundary 1 
+  123   4.17701523   1.40417852 boundary 1 
+  124   4.66186501   1.38265935 boundary 1 
+  125   0.67384262   0.33189166 boundary 1 
+  126   2.22813860   0.08423895 boundary 1 
+  127   6.25927506   1.36824794 boundary 1 
+  128   0.36452063   1.30686169 boundary 1 
+  129   0.11344748   0.94180195 boundary 1 
+  130   3.93082597   0.57544646 boundary 1 
+  131   0.57773161   1.45537776 boundary 1 
+  132   3.61503523   1.88981400 boundary 1 
+  133   4.64076470   0.55203777 boundary 1 
+  134   2.73806105   1.71608266 boundary 1 
+  135   0.71450320   0.68105383 boundary 1 
+  136   0.48063830   0.43060706 boundary 1 
+  137   2.50761163   1.49352628 boundary 1 
+  138   5.15243788   2.25122181 boundary 1 
+  139   2.55462101   1.90646274 boundary 1 
+  140   2.54684974   1.95953260 boundary 1 
+
+ EDGES 
+    1     1     2 boundary 1 tension 0 
+    2     1     3 boundary 1 tension 0 
+    3     2     4 boundary 1 tension 0 
+    4     3     5 boundary 1 tension 0 
+    5     4     6 boundary 1 tension 0 
+    6     5     6 boundary 1 tension 0 
+    7     7     9 boundary 1 tension 0 
+    8     8     9 boundary 1 tension 0 
+    9     7    10 boundary 1 tension 0 
+   10     8    11 boundary 1 tension 0 
+   11    10    11 boundary 1 tension 0 
+   12    12    13 boundary 1 tension 0 
+   13     9    14 boundary 1 tension 0 
+   14    13    14 boundary 1 tension 0 
+   15     7    15 boundary 1 tension 0 
+   16    12    15 boundary 1 tension 0 
+   17    16    17 boundary 1 tension 0 
+   18    16    19 boundary 1 tension 0 
+   19    18    19 boundary 1 tension 0 
+   20    17    20 boundary 1 tension 0 
+   21    18    20 boundary 1 tension 0 
+   22    21    24 boundary 1 tension 0 
+   23    22    24 boundary 1 tension 0 
+   24    21    25 boundary 1 tension 0 
+   25    23    25 boundary 1 tension 0 
+   26    22    26 boundary 1 tension 0 
+   27    23    26 boundary 1 tension 0 
+   28    27    28 boundary 1 tension 0 
+   29    27    30 boundary 1 tension 0 
+   30    30    31 boundary 1 tension 0 
+   31    28    32 boundary 1 tension 0 
+   32    29    33 boundary 1 tension 0 
+   33    32    33 boundary 1 tension 0 
+   34    29    34 boundary 1 tension 0 
+   35    31    34 boundary 1 tension 0 
+   36    28    35 boundary 1 tension 0 
+   37    35    36 boundary 1 tension 0 
+   38    27    37 boundary 1 tension 0 
+   39    36    37 boundary 1 tension 0 
+   40    21    38 boundary 1 tension 0 
+   41    38    39 boundary 1 tension 0 
+   42    25    40 boundary 1 tension 0 
+   43    39    40 boundary 1 tension 0 
+   44    39    42 boundary 1 tension 0 
+   45    34    43 boundary 1 tension 0 
+   46    38    43 boundary 1 tension 0 
+   47    41    43 boundary 1 tension 0 
+   48    41    44 boundary 1 tension 0 
+   49    42    44 boundary 1 tension 0 
+   50    45    46 boundary 1 tension 0 
+   51    22    47 boundary 1 tension 0 
+   52    45    47 boundary 1 tension 0 
+   53    46    47 boundary 1 tension 0 
+   54    41    49 boundary 1 tension 0 
+   55    48    49 boundary 1 tension 0 
+   56    44    50 boundary 1 tension 0 
+   57    48    51 boundary 1 tension 0 
+   58    50    51 boundary 1 tension 0 
+   59    32    52 boundary 1 tension 0 
+   60    33    53 boundary 1 tension 0 
+   61    52    53 boundary 1 tension 0 
+   62    52    54 boundary 1 tension 0 
+   63    53    55 boundary 1 tension 0 
+   64    54    56 boundary 1 tension 0 
+   65    55    56 boundary 1 tension 0 
+   66    19    57 boundary 1 tension 0 
+   67    16    58 boundary 1 tension 0 
+   68    57    59 boundary 1 tension 0 
+   69    58    60 boundary 1 tension 0 
+   70    59    60 boundary 1 tension 0 
+   71    61    62 boundary 1 tension 0 
+   72    61    63 boundary 1 tension 0 
+   73    62    64 boundary 1 tension 0 
+   74    63    65 boundary 1 tension 0 
+   75    64    65 boundary 1 tension 0 
+   76    63    66 boundary 1 tension 0 
+   77    48    67 boundary 1 tension 0 
+   78    66    67 boundary 1 tension 0 
+   79    51    68 boundary 1 tension 0 
+   80    66    68 boundary 1 tension 0 
+   81    40    69 boundary 1 tension 0 
+   82    42    69 boundary 1 tension 0 
+   83    24    71 boundary 1 tension 0 
+   84    31    71 boundary 1 tension 0 
+   85    70    71 boundary 1 tension 0 
+   86    45    72 boundary 1 tension 0 
+   87     4    73 boundary 1 tension 0 
+   88    70    73 boundary 1 tension 0 
+   89    72    73 boundary 1 tension 0 
+   90    57    75 boundary 1 tension 0 
+   91    74    75 boundary 1 tension 0 
+   92     8    76 boundary 1 tension 0 
+   93    74    76 boundary 1 tension 0 
+   94    11    77 boundary 1 tension 0 
+   95    75    77 boundary 1 tension 0 
+   96    35    78 boundary 1 tension 0 
+   97    54    79 boundary 1 tension 0 
+   98    78    79 boundary 1 tension 0 
+   99    14    80 boundary 1 tension 0 
+  100    81    82 boundary 1 tension 0 
+  101    81    83 boundary 1 tension 0 
+  102    80    84 boundary 1 tension 0 
+  103    83    84 boundary 1 tension 0 
+  104    80    85 boundary 1 tension 0 
+  105    82    85 boundary 1 tension 0 
+  106    29    86 boundary 1 tension 0 
+  107    49    86 boundary 1 tension 0 
+  108     3    87 boundary 1 tension 0 
+  109     1    88 boundary 1 tension 0 
+  110    87    89 boundary 1 tension 0 
+  111    88    89 boundary 1 tension 0 
+  112    13    90 boundary 1 tension 0 
+  113    79    91 boundary 1 tension 0 
+  114    12    92 boundary 1 tension 0 
+  115    91    93 boundary 1 tension 0 
+  116    92    93 boundary 1 tension 0 
+  117    90    94 boundary 1 tension 0 
+  118    91    94 boundary 1 tension 0 
+  119    17    95 boundary 1 tension 0 
+  120    58    96 boundary 1 tension 0 
+  121    96    97 boundary 1 tension 0 
+  122    23    98 boundary 1 tension 0 
+  123    69    98 boundary 1 tension 0 
+  124    97    98 boundary 1 tension 0 
+  125    26    99 boundary 1 tension 0 
+  126    46    99 boundary 1 tension 0 
+  127    95    99 boundary 1 tension 0 
+  128     2   100 boundary 1 tension 0 
+  129   100   101 boundary 1 tension 0 
+  130    88   102 boundary 1 tension 0 
+  131   101   102 boundary 1 tension 0 
+  132    72   103 boundary 1 tension 0 
+  133   100   103 boundary 1 tension 0 
+  134   101   103 boundary 1 tension 0 
+  135    65   104 boundary 1 tension 0 
+  136    67   104 boundary 1 tension 0 
+  137    86   105 boundary 1 tension 0 
+  138   104   105 boundary 1 tension 0 
+  139    30   106 boundary 1 tension 0 
+  140    37   106 boundary 1 tension 0 
+  141    85   107 boundary 1 tension 0 
+  142    90   107 boundary 1 tension 0 
+  143     5   108 boundary 1 tension 0 
+  144    78   108 boundary 1 tension 0 
+  145    94   109 boundary 1 tension 0 
+  146   108   110 boundary 1 tension 0 
+  147   109   110 boundary 1 tension 0 
+  148    77   111 boundary 1 tension 0 
+  149    61   112 boundary 1 tension 0 
+  150   111   112 boundary 1 tension 0 
+  151    68   113 boundary 1 tension 0 
+  152   111   113 boundary 1 tension 0 
+  153    70   114 boundary 1 tension 0 
+  154   106   114 boundary 1 tension 0 
+  155   110   115 boundary 1 tension 0 
+  156   107   116 boundary 1 tension 0 
+  157   109   117 boundary 1 tension 0 
+  158   115   117 boundary 1 tension 0 
+  159   116   117 boundary 1 tension 0 
+  160   116   118 boundary 1 tension 0 
+  161    87   119 boundary 1 tension 0 
+  162   115   119 boundary 1 tension 0 
+  163   118   119 boundary 1 tension 0 
+  164    18   120 boundary 1 tension 0 
+  165    83   120 boundary 1 tension 0 
+  166    20   121 boundary 1 tension 0 
+  167    81   121 boundary 1 tension 0 
+  168    89   122 boundary 1 tension 0 
+  169   121   123 boundary 1 tension 0 
+  170   122   123 boundary 1 tension 0 
+  171    82   124 boundary 1 tension 0 
+  172   118   124 boundary 1 tension 0 
+  173   122   124 boundary 1 tension 0 
+  174    62   125 boundary 1 tension 0 
+  175    10   126 boundary 1 tension 0 
+  176   112   126 boundary 1 tension 0 
+  177   125   126 boundary 1 tension 0 
+  178    56   127 boundary 1 tension 0 
+  179    93   127 boundary 1 tension 0 
+  180   127   128 boundary 1 tension 0 
+  181    92   129 boundary 1 tension 0 
+  182   128   129 boundary 1 tension 0 
+  183    74   130 boundary 1 tension 0 
+  184   120   130 boundary 1 tension 0 
+  185    55   131 boundary 1 tension 0 
+  186   105   131 boundary 1 tension 0 
+  187   128   131 boundary 1 tension 0 
+  188    95   132 boundary 1 tension 0 
+  189   102   132 boundary 1 tension 0 
+  190   123   132 boundary 1 tension 0 
+  191    76   133 boundary 1 tension 0 
+  192    84   133 boundary 1 tension 0 
+  193   130   133 boundary 1 tension 0 
+  194    60   134 boundary 1 tension 0 
+  195    96   134 boundary 1 tension 0 
+  196    64   135 boundary 1 tension 0 
+  197   129   135 boundary 1 tension 0 
+  198    15   136 boundary 1 tension 0 
+  199   125   136 boundary 1 tension 0 
+  200   135   136 boundary 1 tension 0 
+  201    59   137 boundary 1 tension 0 
+  202   113   137 boundary 1 tension 0 
+  203     6   138 boundary 1 tension 0 
+  204    36   138 boundary 1 tension 0 
+  205   114   138 boundary 1 tension 0 
+  206   134   139 boundary 1 tension 0 
+  207   137   139 boundary 1 tension 0 
+  208    50   140 boundary 1 tension 0 
+  209    97   140 boundary 1 tension 0 
+  210   139   140 boundary 1 tension 0 
+
+ FACES 
+    1      4      6     -5     -3     -1      2   boundary 1  
+    2      9     11    -10      8     -7   boundary 1  
+    3      7     13    -14    -12     16    -15   boundary 1  
+    4     17     20    -21     19    -18   boundary 1  
+    5    -25     27    -26     23    -22     24   boundary 1  
+    6     31     33    -32     34    -35    -30    -29     28   boundary 1  
+    7    -39    -37    -36    -28     38   boundary 1  
+    8     41     43    -42    -24     40   boundary 1  
+    9    -47     48    -49    -44    -41     46   boundary 1  
+   10    -53    -50     52   boundary 1  
+   11    -55     57    -58    -56    -48     54   boundary 1  
+   12     64    -65    -63    -61     62   boundary 1  
+   13     18     66     68     70    -69    -67   boundary 1  
+   14     71     73     75    -74    -72   boundary 1  
+   15     57     79    -80     78    -77   boundary 1  
+   16     82    -81    -43     44   boundary 1  
+   17    -52     86     89    -88     85    -83    -23     51   boundary 1  
+   18     10     94    -95    -91     93    -92   boundary 1  
+   19     96     98    -97    -62    -59    -31     36   boundary 1  
+   20    102   -103   -101    100    105   -104   boundary 1  
+   21   -107    -54     47    -45    -34    106   boundary 1  
+   22    111   -110   -108     -2    109   boundary 1  
+   23     12    112    117   -118    115   -116   -114   boundary 1  
+   24    119    127   -125    -27    122   -124   -121   -120    -67     17   boundary 1  
+   25    128    129    131   -130   -109      1   boundary 1  
+   26   -134   -129    133   boundary 1  
+   27     77    136    138   -137   -107    -55   boundary 1  
+   28    139   -140    -38     29   boundary 1  
+   29     14     99    104    141   -142   -112   boundary 1  
+   30    146   -147   -145   -118   -113    -98    144   boundary 1  
+   31     72     76     80    151   -152    150   -149   boundary 1  
+   32     84    -85    153   -154   -139     30   boundary 1  
+   33     61    -60    -33     59   boundary 1  
+   34    158   -159    160    163   -162   boundary 1  
+   35     21    166   -167    101    165   -164   boundary 1  
+   36    167    169   -170    173   -171   -100   boundary 1  
+   37    149    176   -177   -174    -71   boundary 1  
+   38    116    179    180    182   -181   boundary 1  
+   39    164    184   -183     91    -90    -66    -19   boundary 1  
+   40     74    135   -136    -78    -76   boundary 1  
+   41    113    115    179   -178    -64     97   boundary 1  
+   42     60     63    185   -186   -137   -106     32   boundary 1  
+   43    126   -127    188   -189   -131    134   -132    -86     50   boundary 1  
+   44    161   -162   -155   -146   -143     -4    108   boundary 1  
+   45    103    192   -193   -184   -165   boundary 1  
+   46     83    -84     35     45    -46    -40     22   boundary 1  
+   47     92    191   -192   -102    -99    -13     -8   boundary 1  
+   48    142    156    159   -157   -145   -117   boundary 1  
+   49    195   -194    -69    120   boundary 1  
+   50    174    199   -200   -196    -73   boundary 1  
+   51    114    181    197    200   -198    -16   boundary 1  
+   52     87    -89    132   -133   -128      3   boundary 1  
+   53     42     81    123   -122     25   boundary 1  
+   54    185   -187   -180   -178    -65   boundary 1  
+   55     90     95    148    152    202   -201    -68   boundary 1  
+   56    189   -190   -170   -168   -111    130   boundary 1  
+   57   -144    -96     37    204   -203     -6    143   boundary 1  
+   58    119    188   -190   -169   -166    -20   boundary 1  
+   59    183    193   -191    -93   boundary 1  
+   60    209   -210   -206   -195    121   boundary 1  
+   61    140    154    205   -204     39   boundary 1  
+   62     15    198   -199    177   -175     -9   boundary 1  
+   63    196   -197   -182    187   -186   -138   -135    -75   boundary 1  
+   64    194    206   -207   -201     70   boundary 1  
+   65    155    158   -157    147   boundary 1  
+   66     56    208   -209    124   -123    -82     49   boundary 1  
+   67    171   -172   -160   -156   -141   -105   boundary 1  
+   68    175   -176   -150   -148    -94    -11   boundary 1  
+   69    125   -126     53    -51     26   boundary 1  
+   70    168    173   -172    163   -161    110   boundary 1  
+   71    203   -205   -153     88    -87      5   boundary 1  
+   72     79    151    202    207    210   -208     58   boundary 1  
+
+read 
+read "vm_sphere_area_params.inp"; 
+read "vm_sphere_area_functions.secmd"; 
+random_seed:=17; 
+
+showq
+
+gogo
+
+
