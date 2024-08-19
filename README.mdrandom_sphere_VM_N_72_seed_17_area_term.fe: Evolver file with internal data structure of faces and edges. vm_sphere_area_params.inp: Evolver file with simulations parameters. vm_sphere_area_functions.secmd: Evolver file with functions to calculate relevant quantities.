@@ -1,0 +1,3 @@
+random_sphere_VM_N_72_seed_17_area_term.fe: Evolver file with internal data structure of faces and edges.
+vm_sphere_area_params.inp: Evolver file with simulations parameters.
+vm_sphere_area_functions.secmd: Evolver file with functions to calculate relevant quantities.
